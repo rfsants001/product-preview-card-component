@@ -1,0 +1,131 @@
+:root {
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --very-dark-cyan: hsl(156, 42%, 18%);
+}
+
+body {
+    background-color: var(--cream);
+}
+
+
+
+main {
+    background-color: var(--white);
+    display: grid;
+    max-width: 560px;
+    grid-template-columns: 280px 278px;
+    margin: 100px auto;
+    border-radius: 5px;
+}
+
+main img {
+    border-radius: 5px 0 0 5px;
+}
+
+main img.img-mobile {
+    display: none;
+}
+
+section {
+    padding: 18px;
+}
+
+h1, h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+}
+
+section span {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    margin-bottom: 25px;
+    letter-spacing: 8px;
+}
+
+section h1 {
+    color: var(--very-dark-blue);
+    line-height: 28px;
+    margin: 20px 0;
+    padding-right: 45px;
+}
+
+p, s, button, span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+section > p {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    color: var(--dark-grayish-blue);
+}
+
+article {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+article h2 {
+    color: var(--dark-cyan);
+}
+
+article p s {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark-cyan);
+    border: 1px solid var(--dark-grayish-blue);
+    border-radius: 8px;
+    padding: 10px 35px;
+    width: 100%;
+    color: var(--white);
+    cursor: pointer;
+    transition: .4s background;
+    font-weight: 700;
+    gap: 10px;
+}
+
+button:hover{
+    background: var(--very-dark-cyan);
+}
+
+footer.attribution {
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 375px) {
+    main {
+        background-color: var(--white);
+        display: grid;
+        max-width: 560px;
+        grid-template-columns: auto;
+        margin: 22px 10px;
+        border-radius: 5px;
+    }
+
+
+    main img.img-desktop {
+        display: none !important;
+    }
+
+    main img.img-mobile {
+        display: block !important;
+        border-radius: 5px 5px 0 0;
+    }
+}
